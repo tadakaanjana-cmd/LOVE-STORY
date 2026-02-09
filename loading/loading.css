@@ -1,0 +1,101 @@
+ @import url(https://fonts.googleapis.com/css?family=Bungee);
+
+.scene {
+  display: grid;
+  place-items: center;
+  background: PapayaWhip;
+}
+
+.cookie-box {
+  display: flex;
+  animation: bounce 3s ease infinite;
+  margin-bottom: 30px;
+  margin-top: 150px;
+}
+
+.cookie, .cookie2 .choc-chip-box {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.cookie {
+  height: 150px;
+  width: 150px;
+  background-color: #D27D2D;
+  border-radius: 50% 45% 55% 45%;
+}
+
+.loading span {
+  display: inline-block;
+  color: #D27D2D;
+  font-family: Bungee;
+  font-size: 2rem;
+  animation: bounce 3s ease infinite;
+}
+
+.bite {
+  height: 100px;
+  width: 100px;
+  margin-left: -100px;
+  background-color: PapayaWhip;
+  z-index: 2;
+  border-radius: 50%;
+  opacity: 0%;
+}
+
+.cookie2 {
+  height: 150px;
+  width: 150px;
+  margin-left: -150px;
+  background-color: #D27D2D;
+  border-radius: 45%;
+  transform: rotate(40deg);
+}
+
+.choc-chip-box {
+  height: 150px;
+  width: 150px;
+  margin-right: -150px;
+  z-index: 1;
+}
+
+.choc-chip {
+  height: 25px;
+  width: 30px;
+}
+
+.regular {
+  background-color: #7B3F00;
+  border-radius: 35% 40%;
+}
+
+.triangle {
+  background-color: #7B3F00;
+  border-radius: 50% 100% 45% 45%;
+}
+
+/* positions */
+#first { transform: translate(170px, -40px); }
+#second { transform: translate(85px, -30px); }
+#third { transform: translate(130px, 0px); }
+#fourth { transform: translate(80px, 40px); }
+#fifth { transform: translate(130px, 75px); }
+#sixth { transform: translate(170px, 40px); }
+
+/* animation delays */
+.loading span:nth-child(1) { animation-delay: 0s; }
+.loading span:nth-child(2) { animation-delay: 0.3s; }
+.loading span:nth-child(3) { animation-delay: 0.6s; }
+.loading span:nth-child(4) { animation-delay: 0.8s; }
+.loading span:nth-child(5) { animation-delay: 0.9s; }
+.loading span:nth-child(6) { animation-delay: 1s; }
+.loading span:nth-child(7) { animation-delay: 1.3s; }
+.loading span:nth-child(8) { animation-delay: 1.6s; }
+.loading span:nth-child(9) { animation-delay: 1.8s; }
+.loading span:nth-child(10) { animation-delay: 1.9s; }
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  50% { transform: translateY(15px); }
+  to { transform: translateY(0); }
+}
